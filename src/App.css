@@ -10,7 +10,9 @@ body {
 @media (min-width: 359px) {
   body {
     background-image: url(/src/assets/home/background-home-mobile.jpg);
-    background-repeat: no-repeat;
+    /* background-repeat: no-repeat; */
+    background-position: center;
+    background-size: cover;
   }
 }
 
