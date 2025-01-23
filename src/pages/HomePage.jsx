@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 function HomePage() {
   return (
-    <div className=" mb-12 text-center mt-6 lg:grid grid-cols-2 sm:mt-16 sm:mt-24">
+    <div className=" min-h-[85vh] text-center mt-6 lg:grid grid-cols-2 sm:mt-16 sm:mt-24">
       <div className=" ">
         <h1 className=" text-white text-xl sm:tracking-widest">
           SO, YOU WANT TO TRAVEL TO
