@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 function MobileNav() {
   return (
     <div className=" absolute inset-0 flex justify-end ">
-      <nav className="bg-black bg-opacity-10 backdrop-blur-md w-[60%] h-full px-6 py-32  ">
+      <nav className="bg-black z-10 bg-opacity-10 backdrop-blur-lg w-[75%] h-full px-6 py-32  ">
         <ul className=" flex flex-col gap-4">
           <li className=" text-white text-lg uppercase">
             <Link to="/">

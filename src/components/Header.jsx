@@ -9,9 +9,10 @@ function Header() {
   return (
     <header className=" flex items-center justify-between">
       <Logo />
-      <div className=" sm:hidden z-10">
+      <div className=" sm:hidden z-20">
         <img src={hamburger} alt="Hamburger menu icon" />
       </div>
+      <MobileNav />
       <NavPage />
     </header>
   );
