@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  /* font-family: "Roboto Mono", serif; */
+  font-family: "Poppins", serif;
+}
+
 @media (min-width: 359px) {
   body {
     background-image: url(/src/assets/home/background-home-mobile.jpg);

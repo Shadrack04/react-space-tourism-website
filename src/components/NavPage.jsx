@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 function NavPage() {
   return (
     <div className=" hidden sm:flex">
-      <nav className=" bg-black bg-opacity-10 backdrop-blur-md p-4 flex">
+      <nav className=" sm:bg-white sm:bg-opacity-10 backdrop-blur-md sm:p-6 lg:p-4 sm:flex">
         <ul className=" flex gap-4">
           <li className=" text-white text-lg uppercase">
             <Link to="/">

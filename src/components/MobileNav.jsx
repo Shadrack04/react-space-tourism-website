@@ -1,10 +1,21 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-function MobileNav() {
+function MobileNav({ isLargeScreen, isOpenNav }) {
+  if (isLargeScreen) return;
+
+  const slideIn = {};
+
   return (
     <div className=" absolute inset-0 flex justify-end ">
-      <nav className="bg-black z-10 bg-opacity-10 backdrop-blur-lg w-[75%] h-full px-6 py-32  ">
+      <nav
+        style={
+          isOpenNav
+            ? { transform: "translateX(0)" }
+            : { transform: "translateX(-75%)" }
+        }
+        className="bg-black z-10 bg-opacity-10 backdrop-blur-lg w-[75%] h-full px-6 py-32 transition-transform duration-300 animate-slideIn"
+      >
         <ul className=" flex flex-col gap-4">
           <li className=" text-white text-lg uppercase">
             <Link to="/">
