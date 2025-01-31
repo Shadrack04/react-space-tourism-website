@@ -1,10 +1,9 @@
-import React from "react";
 import { Link } from "react-router-dom";
 
 function NavPage() {
   return (
-    <div className=" hidden sm:flex sm:w-[50%]">
-      <nav className=" sm:bg-white sm:bg-opacity-10 backdrop-blur-md sm:p-6 lg:p-4 sm:flex sm:w-full">
+    <div className=" hidden sm:flex lg:w-[50%]">
+      <nav className=" sm:bg-white sm:bg-opacity-10 backdrop-blur-md sm:p-6 lg:p-4 sm:flex lg:w-full">
         <ul className=" flex gap-4 justify-end w-full">
           <li className=" text-white text-lg uppercase">
             <Link to="/">

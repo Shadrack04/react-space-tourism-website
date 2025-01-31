@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import Header from "../components/Header";
 
 function HomePage({ isLargeScreen }) {
@@ -30,5 +31,9 @@ function HomePage({ isLargeScreen }) {
     </div>
   );
 }
+
+HomePage.propTypes = {
+  isLargeScreen: PropTypes.bool,
+};
 
 export default HomePage;

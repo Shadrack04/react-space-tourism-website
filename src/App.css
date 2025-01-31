@@ -12,6 +12,7 @@ body {
     background-image: url(/src/assets/home/background-home-mobile.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    height: 100vh;
   }
   .destination-bg {
     background-image: url(../public/destination/background-destination-mobile.jpg);
@@ -28,8 +29,9 @@ body {
   }
   .destination-bg {
     background-image: url(../public/destination/background-destination-tablet.jpg);
-    background-size: 100vh 100vw;
+    background-size: cover;
     background-position: center;
+    height: 100vh;
   }
 }
 
