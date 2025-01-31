@@ -1,51 +1,74 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { destinations } from "../../data.json";
+import Header from "../components/Header";
+import PropTypes from "prop-types";
 
-function Destination() {
+function Destination({ isLargeScreen }) {
   const [planets] = useState(destinations);
   const [location, setLocation] = useState(planets[0]);
-  console.log(planets);
-  console.log(".".concat(location.images.png));
+
   return (
-    <div>
-      <div>
-        <p className="text-white">
-          <spa>01</spa> PICK YOUR DESTINATION
-        </p>
-        <div>
-          <img src="../assets/destination/image-moon.png" alt={location.name} />
+    <div className="destination-bg p-[24px]">
+      <Header isLargeScreen={isLargeScreen} />
+      <p className="text-white mt-4 sm:mx-[15%]">
+        <span className=" text-stone-400 mr-4">01</span> PICK YOUR DESTINATION
+      </p>
+      <div className=" flex items-center flex-col sm:flex-row sm:px-48 sm:mt-8">
+        <div className=" flex-1">
+          <div>
+            <img
+              className=" w-44 h-44 sm:w-64 sm:h-64 my-4"
+              src={location.images.png}
+              alt={location.name}
+            />
+          </div>
         </div>
 
-        <div>
-          <div>
-            {planets.map((planet) => (
-              <button
-                className=" text-white mx-2 uppercase hover:underline hover:underline-offset-[12px]"
-                key={planet.name}
-              >
-                {planet.name}
-              </button>
-            ))}
+        <div className=" flex-1">
+          <div className="">
+            <div className=" text-center sm:text-start pt-2">
+              {planets.map((planet, index) => (
+                <button
+                  onClick={() => setLocation(planets[index])}
+                  className={` text-stone-300 hover:text-white mx-2 uppercase hover:underline hover:underline-offset-[12px]`}
+                  key={planet.name}
+                >
+                  {planet.name}
+                </button>
+              ))}
+            </div>
+            <h1 className="text-white sm:text-start planet-name tracking-widest text-center text-6xl font-medium my-4 uppercase">
+              {location.name}
+            </h1>
+            <article className=" border-b-2 border-stone-700 pb-8">
+              <p className=" sm:text-start text-stone-300 text-sm text-justify tracking-wider">
+                {location.description}
+              </p>
+            </article>
           </div>
-          <h1>{location.name}</h1>
-          <article>
-            <p>{"../../".concat(location.description)}</p>
-          </article>
-        </div>
 
-        <div>
-          <div>
-            <p>AVG. DISTANCE</p>
-            <p>{location.distance}</p>
-          </div>
-          <div>
-            <p>EST. TRAVEL TIME</p>
-            <p>{location.travel}</p>
+          <div className=" text-white my-4 mx-auto text-center sm:text-start tracking-wide sm:flex items-center gap-16">
+            <div className=" mb-4 flex flex-col gap-1">
+              <p className=" text-stone-300">AVG. DISTANCE</p>
+              <p className=" text-2xl font-semibold uppercase">
+                {location.distance}
+              </p>
+            </div>
+            <div className=" mb-4 flex flex-col gap-1">
+              <p className=" text-stone-300">EST. TRAVEL TIME</p>
+              <p className=" text-2xl font-semibold uppercase">
+                {location.travel}
+              </p>
+            </div>
           </div>
         </div>
       </div>
     </div>
   );
 }
+
+Destination.propTypes = {
+  isLargeScreen: PropTypes.bool,
+};
 
 export default Destination;

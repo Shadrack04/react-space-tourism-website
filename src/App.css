@@ -8,27 +8,48 @@ body {
 }
 
 @media (min-width: 359px) {
-  body {
+  .home {
     background-image: url(/src/assets/home/background-home-mobile.jpg);
     background-repeat: no-repeat;
     background-size: cover;
   }
+  .destination-bg {
+    background-image: url(../public/destination/background-destination-mobile.jpg);
+    background-size: 100vh 100vw;
+    background-position: center;
+  }
 }
 
 @media (min-width: 738px) {
-  body {
+  .home {
     background-image: url(/src/assets/home/background-home-tablet.jpg);
     background-repeat: no-repeat;
     background-size: cover;
   }
+  .destination-bg {
+    background-image: url(../public/destination/background-destination-tablet.jpg);
+    background-size: 100vh 100vw;
+    background-position: center;
+  }
 }
 
 @media (min-width: 1024px) {
-  body {
+  .home {
     background-image: url(/src/assets/home/background-home-desktop.jpg);
     background-repeat: no-repeat;
     background-size: cover;
   }
+  .destination-bg {
+    background-image: url(../public/destination/background-destination-desktop.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+  }
+}
+
+.planet-name {
+  font-family: "Roboto Mono", serif;
 }
 
 /* 

@@ -18,16 +18,17 @@ function App() {
     return () => mediaQuery.removeEventListener("change", handleScreenChange);
   }, []);
   return (
-    <div className=" p-[24px]">
-      <BrowserRouter>
-        <Header isLargeScreen={isLargeScreen} />
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="destination" element={<Destination />} />
-          <Route path="crew" element={<Crew />} />
-          <Route path="technology" element={<Technology />} />
-        </Routes>
-      </BrowserRouter>
+    <div className="">
+      {/* <Header isLargeScreen={isLargeScreen} /> */}
+      <Routes>
+        <Route path="/" element={<HomePage isLargeScreen={isLargeScreen} />} />
+        <Route
+          path="destination"
+          element={<Destination isLargeScreen={isLargeScreen} />}
+        />
+        <Route path="crew" element={<Crew />} />
+        <Route path="technology" element={<Technology />} />
+      </Routes>
     </div>
   );
 }

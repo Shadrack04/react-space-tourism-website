@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import { useState } from "react";
+import PropTypes from "prop-types";
 import Logo from "./Logo";
 import NavPage from "./NavPage";
 import hamburger from "../assets/shared/icon-hamburger.svg";
@@ -7,6 +8,7 @@ import MobileNav from "./MobileNav";
 
 function Header({ isLargeScreen }) {
   const [isOpenNav, setIsOPenNav] = useState(false);
+
   return (
     <header className=" flex items-center justify-between">
       <Logo />
@@ -19,11 +21,19 @@ function Header({ isLargeScreen }) {
         />
       </div>
       {isOpenNav && (
-        <MobileNav isOpenNav={isOpenNav} isLargeScreen={isLargeScreen} />
+        <MobileNav
+          isOpenNav={isOpenNav}
+          setIsOPenNav={setIsOPenNav}
+          isLargeScreen={isLargeScreen}
+        />
       )}
       <NavPage />
     </header>
   );
 }
+
+Header.propTypes = {
+  isLargeScreen: PropTypes.bool,
+};
 
 export default Header;
