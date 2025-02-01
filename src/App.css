@@ -19,6 +19,13 @@ body {
     background-size: 100vh 100vw;
     background-position: center;
   }
+  .crew-bg {
+    background-image: url(../public/crew/background-crew-mobile.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    min-height: 100vh;
+  }
 }
 
 @media (min-width: 738px) {
@@ -32,6 +39,13 @@ body {
     background-size: cover;
     background-position: center;
     height: 100vh;
+  }
+  .crew-bg {
+    background-image: url(../public/crew/background-crew-tablet.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    min-height: 100vh;
   }
 }
 
@@ -48,10 +62,21 @@ body {
     background-size: cover;
     height: 100vh;
   }
+  .crew-bg {
+    background-image: url(../public/crew/background-crew-desktop.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    min-height: 100vh;
+  }
 }
 
 .planet-name {
   font-family: "Roboto Mono", serif;
+}
+
+.active-crew {
+  background-color: white;
 }
 
 /* 

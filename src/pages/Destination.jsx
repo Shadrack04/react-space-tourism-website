@@ -47,7 +47,7 @@ function Destination({ isLargeScreen }) {
             </article>
           </div>
 
-          <div className=" text-white my-4 mx-auto text-center sm:text-start tracking-wide sm:flex sm:items-center sm:justify-around gap-16">
+          <div className=" text-white my-4 mx-auto text-center sm:text-start tracking-wide sm:flex sm:items-center sm:justify-around lg:justify-normal gap-16">
             <div className=" mb-4 flex flex-col gap-1">
               <p className=" text-stone-300">AVG. DISTANCE</p>
               <p className=" text-2xl font-semibold uppercase">
