@@ -2,8 +2,6 @@ import Header from "../components/Header";
 import { crew } from "../../data.json";
 import { useState } from "react";
 
-console.log(crew);
-
 function Crew() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [staff, setStaff] = useState(crew[currentIndex]);

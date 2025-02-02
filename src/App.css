@@ -26,6 +26,13 @@ body {
     background-size: cover;
     min-height: 100vh;
   }
+  .technology-bg {
+    background-image: url(../public/technology/background-technology-mobile.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+  }
 }
 
 @media (min-width: 738px) {
@@ -45,6 +52,13 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    min-height: 100vh;
+  }
+  .technology-bg {
+    background-image: url(../public/technology/background-technology-tablet.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
     min-height: 100vh;
   }
 }
@@ -69,6 +83,13 @@ body {
     background-size: cover;
     min-height: 100vh;
   }
+  .technology-bg {
+    background-image: url(../public/technology/background-technology-desktop.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+  }
 }
 
 .planet-name {
@@ -77,6 +98,10 @@ body {
 
 .active-crew {
   background-color: white;
+}
+.active-tech {
+  background-color: white;
+  color: black;
 }
 
 /* 
